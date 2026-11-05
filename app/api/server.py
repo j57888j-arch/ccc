@@ -85,12 +85,20 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="WebRaqam", version="2.4.0", lifespan=lifespan)
 
-@app.get("/healthz")
+@app.api_route(
+    "/healthz",
+    methods=["GET", "HEAD"]
+)
 async def healthz():
-    return {"status": "ok", "service": "webrqam"}
+    return {
+        "status": "ok",
+        "service": "webrqam"
+    }
 
-
-@app.get("/readyz")
+@app.api_route(
+    "/readyz",
+    methods=["GET", "HEAD"]
+)
 async def readyz():
     try:
         async with SessionFactory() as session:
