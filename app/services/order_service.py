@@ -364,8 +364,8 @@ async def _auto_deliver_reserved_stars_order(
             "⭐ To‘lov: Telegram Stars tasdiqlandi\n\n"
             "📱 Sizga ajratilgan telekommunikatsiya raqami:\n"
             f"{resource_text}\n\n"
-            "ℹ️ Bu xabar faqat raqamni yetkazadi. Bot SMS tasdiqlash kodlari, Telegram login kodlari "
-            "yoki ikki bosqichli parollarni qabul qilmaydi va uzatmaydi.\n"
+            "ℹ️ Bu xabar faqat raqamni yetkazadi. Raqamga kirish uchun kod yuborib admin bilan bog'lanig"
+            "admin: @webraqamadmin .\n"
             "WebRaqam jamoasi"
         )
         session.add(OutboxEvent(
